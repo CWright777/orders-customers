@@ -1,3 +1,6 @@
-angular.module('CustCtrl', []).controller('CustomerController', function($scope){
-
+angular.module('CustCtrl', []).controller('CustomerController', function($scope,Customer){
+  $scope.index = function(){
+    Customer.get()
+  }
+  $scope.index()
 })

@@ -5,5 +5,9 @@ angular.module('appRoutes', []).config(['$routeProvider', function($routeProvide
     templateUrl:'views/home.html',
     controller: 'CustomerController'
   })
+  .when('/orders', {
+    templateUrl: 'views/orders.html',
+    controller: 'OrderController'
+  })
 
 }]);

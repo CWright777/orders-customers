@@ -1,1 +1,1 @@
-angular.module('ordersApp',['ngRoute','appRoutes','CustCtrl'])
+angular.module('ordersApp',['ngRoute','appRoutes','CustCtrl','CustomerService'])
