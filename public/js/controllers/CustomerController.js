@@ -1,6 +1,20 @@
 angular.module('CustCtrl', []).controller('CustomerController', function($scope,Customer){
-  $scope.index = function(){
-    Customer.get()
+
+  Customer.get(function(customers){
+    $scope.customers = customers
+  })
+
+  $scope.addCustomer = function(){
+    Customer.create($scope.newCustomer, function(customers){
+      $scope.customers = customers
+      $scope.newCustomer = {}
+    });
   }
-  $scope.index()
+
+  $scope.removeCustomer = function(customerId){
+    Customer.delete(customerId, function(customers){
+      $scope.customers = customers;
+    })
+  }
+
 })
