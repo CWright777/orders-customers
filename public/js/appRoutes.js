@@ -7,7 +7,11 @@ angular.module('appRoutes', []).config(['$routeProvider', function($routeProvide
   })
   .when('/orders', {
     templateUrl: 'views/orders.html',
-    controller: 'OrderController'
+    controller: 'ordersController'
+  })
+  .when('/products', {
+    templateUrl: 'views/products.html',
+    controller: 'productsController'
   })
 
 }]);
