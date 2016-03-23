@@ -4,5 +4,7 @@ angular.module('ordersApp',[
     'CustCtrl',
     'CustomerService',
     'ordersCtrl',
-    'orderService'
+    'orderService',
+    'productService',
+    'productsCtrl'
 ])

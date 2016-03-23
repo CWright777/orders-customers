@@ -12,7 +12,6 @@ angular.module('CustomerService', []).factory('Customer', ['$http', function($ht
     },
     delete: function(customerId, callback){
       $http.delete('/customers/' + customerId).success(function(output){
-        console.log(output)
         callback(output);
       })
     }
