@@ -6,7 +6,7 @@ var ProductSchema = new mongoose.Schema({
   description: String,
   quantity: Number,
   created_at: { type: Date, default: Date.now },
-  order: {type: mongoose.Schema.ObjectId, ref:"Order"}
+  orders: [{type: mongoose.Schema.ObjectId, ref:"Order"}]
 })
 
 var Product = mongoose.model('Product', ProductSchema)
