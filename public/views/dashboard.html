@@ -3,13 +3,20 @@
     <input type="text" ng-model='filter_name' placeholder='Search'>
     <input type='submit' value='Filter'>
   </form>
-  <form action="" method="post">
-  <div id="product" ng-repeat="product in products | filter: filter_name">
+  <div id="products" ng-repeat="product in products | filter: filter_name | limitTo: 5">
     <img ng-src="{{product.image}}">
     <br>
     {{product.name}}
     <br>
     {{product.quantity}}
   </div>
-  </form>
+  <a href="#products">Show more...</a>
+  <h2>Recent Orders</h2>
+  <div id="orders" ng-repeat="order in orders | limitTo: 3">
+    <p>{{order._customer.name}} purchased {{order.quantity}} {{order._product.name}}</p>
+  </div>
+  <h2>New Customers</h2>
+  <div ng-repeat="customer in customers | limitTo: 3 | orderBy: 'created_at'">
+    <p>{{customer.name}} joined the store</p>
+  </div>
 </div>
