@@ -28,7 +28,7 @@ module.exports = {
       _product: req.body.productId
     })
     Product.findOneAndUpdate({_id: req.body.productId},
-      {$push: {"orders": newOrder}, $inc: {"quantity": -1}},
+      {$push: {"orders": newOrder}, $inc: {"quantity": (newOrder.quantity)*-1}},
       function(err,product){
         if(err){
           console.log(err);

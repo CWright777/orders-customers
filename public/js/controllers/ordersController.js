@@ -1,4 +1,7 @@
 angular.module('ordersCtrl', []).controller('ordersController', function($scope,Customer,Order,Product){
+  $scope.productFilter = function(product){
+    return product.quantity > 0;
+  }
   Product.get(function(products){
     $scope.products = products;
   })

@@ -8,7 +8,7 @@
     </label>
     <label>Product
     <select ng-model="newOrder.productId">
-      <option ng-repeat ="product in products" value="{{product._id}}">{{product.name}}</option>
+      <option ng-repeat ="product in products | filter: productFilter" value="{{product._id}}">{{product.name}}</option>
     </select>
     </label>
     <br>
@@ -28,7 +28,7 @@
       <td>{{order._customer.name}}</td>
       <td>{{order._product.name}}</td>
       <td>{{order.quantity}}</td>
-      <td><button ng-click='removeCustomer(customer._id)'>Remove</button></td>
+      <td>{{order.created_at}}</td>
     </tr>
   </table>
 </div>
