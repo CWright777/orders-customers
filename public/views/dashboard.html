@@ -1,0 +1,15 @@
+<div ng-controller="dashboardsController">
+  <form>
+    <input type="text" ng-model='filter_name' placeholder='Search'>
+    <input type='submit' value='Filter'>
+  </form>
+  <form action="" method="post">
+  <div id="product" ng-repeat="product in products | filter: filter_name">
+    <img ng-src="{{product.image}}">
+    <br>
+    {{product.name}}
+    <br>
+    {{product.quantity}}
+  </div>
+  </form>
+</div>

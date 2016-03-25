@@ -2,8 +2,8 @@ angular.module('appRoutes', []).config(['$routeProvider', function($routeProvide
   $routeProvider
 
   .when('/', {
-    templateUrl:'views/home.html',
-    controller: 'CustomerController'
+    templateUrl:'views/dashboard.html',
+    controller: 'dashboardsController'
   })
   .when('/orders', {
     templateUrl: 'views/orders.html',
@@ -12,6 +12,10 @@ angular.module('appRoutes', []).config(['$routeProvider', function($routeProvide
   .when('/products', {
     templateUrl: 'views/products.html',
     controller: 'productsController'
+  })
+  .when('/customers', {
+    templateUrl:'views/customers.html',
+    controller: 'CustomerController'
   })
 
 }]);

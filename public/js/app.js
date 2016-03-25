@@ -6,5 +6,6 @@ angular.module('ordersApp',[
     'ordersCtrl',
     'orderService',
     'productService',
-    'productsCtrl'
+    'productsCtrl',
+    'dashboardsCtrl'
 ])
